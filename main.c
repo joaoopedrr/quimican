@@ -1,16 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Função para calcular a molaridade
-double calcular_molaridade(double massa_soluto, double massa_molar, double volume_litros) {
-    // Calculando a quantidade de matéria (n) do soluto
-    double quantidade_materia = massa_soluto / massa_molar;
 
-    // Calculando a molaridade (M = n / V)
-    double molaridade = quantidade_materia / volume_litros;
-
-    return molaridade;
+void boas_vindas() {
+    printf("|===============================================|\n");
+    printf("|\t\t\t\t\t\t|\n");
+    printf("|\t\t\t\t\t\t|\n");
+    printf("|  Bem-vindo ao Consultor Químico!\t\t|\n");
+    printf("|  Aqui você pode consultar misturas químicas.  |\n");
+    printf("|\t\t\t\t\t\t|\n");
+    printf("|\t\t\t\t\t\t|\n");
+    printf("|===============================================|\n\n");
 }
+
+
+void desenho_quimico_etilenico(){
+    printf("  H   O   H\n");
+    printf("   \\ / \\ /\n");
+    printf("    C---C\n");
+    printf("   / \\ / \\\n");
+    printf("  H   O   H\n");
+    printf("\n");
+    printf("Estrutura simples de uma molécula de etileno (C2H4).\n\n\n");
+}
+
+
+
 
 
 void mostrar_elemento(){
@@ -134,7 +149,6 @@ void mostrar_elemento(){
     printf("\t117 - [Tenessino]\t  Ts\t              117\t\t    294,0\n");
     printf("\t118 - [Oganessônio]\t  Og\t              118\t\t    294,0\n");
 }
-
 
 
 
@@ -268,9 +282,32 @@ void escolher_elemento(int numeroAtomico) {
     }
 }
 
+
+
+
+
+
+// Função para calcular a molaridade
+double calcular_molaridade(double massa_soluto, double massa_molar, double volume_litros) {
+    // Calculando a quantidade de matéria (n) do soluto
+    double quantidade_materia = massa_soluto / massa_molar;
+
+    // Calculando a molaridade (M = n / V)
+    double molaridade = quantidade_materia / volume_litros;
+
+    return molaridade;
+}
+
+
+
 int main() {
     double massa_soluto, massa_molar, volume_litros;
     int numeroAtomico;
+
+    // Tela inicial de boas-vindas + desenho quimico de um etileno
+    boas_vindas();
+    desenho_quimico_etilenico();
+    printf("\n\n\n");
 
     // Mostrando todos os elementos químicos
     mostrar_elemento();
